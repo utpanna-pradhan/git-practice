@@ -1,4 +1,52 @@
 # git-practice
+# 📘 Git Practice Questions with Answers
+
+Welcome! This document contains all the important **Git questions with simple answers** for practice and interview preparation. Use this to revise or explain Git to beginners.
+
+---
+
+## 📌 Table of Contents
+
+1. [What is Git?](#1-what-is-git)
+2. [Difference between Git and GitHub](#2-difference-between-git-and-github)
+3. [Initialize a Git repository](#3-initialize-a-git-repository)
+4. [Clone a repository](#4-clone-a-repository)
+5. [Common Git commands](#5-common-git-commands)
+6. [Check Git configuration](#6-check-git-configuration)
+7. [Stage and commit changes](#7-stage-and-commit-changes)
+8. [Check commit history](#8-check-commit-history)
+9. [Undo changes](#9-undo-changes)
+10. [Working with branches](#10-working-with-branches)
+11. [Merging branches](#11-merging-branches)
+12. [Git stash](#12-git-stash)
+13. [Rebase vs Merge](#13-rebase-vs-merge)
+14. [Pull vs Fetch](#14-pull-vs-fetch)
+15. [Resolve merge conflicts](#15-resolve-merge-conflicts)
+16. [Push code to GitHub](#16-push-code-to-github)
+17. [Fork vs Clone](#17-fork-vs-clone)
+18. [Create a Pull Request](#18-create-a-pull-request)
+19. [Tags in Git](#19-tags-in-git)
+20. [Git workflows](#20-git-workflows)
+
+---
+
+## 1. What is Git?
+Git is a **version control system** that tracks changes in code and allows multiple developers to collaborate efficiently.
+
+---
+
+## 2. Difference between Git and GitHub
+| Git        | GitHub                        |
+|------------|-------------------------------|
+| Local tool | Cloud hosting platform for Git |
+| CLI based  | Web-based GUI for repositories |
+| Free/open-source | Owned by Microsoft         |
+
+---
+
+## 3. Initialize a Git repository
+```bash
+git init
 ## 1. What is Git?
 Git is a **version control system** that tracks changes in code and allows multiple developers to collaborate efficiently.
 
