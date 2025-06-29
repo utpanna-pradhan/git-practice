@@ -30,163 +30,271 @@ Welcome! This document contains all the important **Git questions with simple an
 
 ---
 
-## 1. What is Git?
-Git is a **version control system** that tracks changes in code and allows multiple developers to collaborate efficiently.
+1. What is Git?
 
----
+Git is a version control system that tracks code changes and allows multiple developers to collaborate on the same project efficiently.
 
-## 2. Difference between Git and GitHub
-| Git        | GitHub                        |
-|------------|-------------------------------|
-| Local tool | Cloud hosting platform for Git |
-| CLI based  | Web-based GUI for repositories |
-| Free/open-source | Owned by Microsoft         |
+2. What is the difference between Git and GitHub?
 
----
+Git
 
-## 3. Initialize a Git repository
-```bash
+GitHub
+
+Local tool
+
+Cloud platform for Git projects
+
+CLI based
+
+Web-based GUI
+
+Free/open-source
+
+Owned by Microsoft
+
+3. How do you initialize a Git repository?
+
 git init
-## 1. What is Git?
-Git is a **version control system** that tracks changes in code and allows multiple developers to collaborate efficiently.
 
----
+It creates a .git directory that tracks changes in your project.
 
-## 2. Difference between Git and GitHub
-| Git        | GitHub                        |
-|------------|-------------------------------|
-| Local tool | Cloud hosting platform for Git |
-| CLI based  | Web-based GUI for repositories |
-| Free/open-source | Owned by Microsoft         |
+4. How to clone a GitHub repository?
 
----
-
-## 3. Initialize a Git repository
-```bash
-git init
-Creates a .git folder to start tracking your project.
-
-4. Clone a repository
-bash
-Copy
-Edit
 git clone <repo-url>
-Downloads the full repository from GitHub to your local machine.
 
-5. Common Git commands
-Command	Description
-git status	See current changes
-git add .	Stage all changes
-git commit -m "msg"	Commit changes with message
-git log	View commit history
-git diff	Show unstaged changes
+Clones a remote repository to your local machine.
 
-6. Check Git configuration
-bash
-Copy
-Edit
-git config --list
-Shows user name, email, and editor settings.
+5. How do you check the current status of your repository?
 
-7. Stage and commit changes
-bash
-Copy
-Edit
+git status
+
+It shows modified, added, or untracked files.
+
+6. How do you stage all files for commit?
+
 git add .
-git commit -m "Added feature"
-Stages all files and commits with a message.
 
-8. Check commit history
-bash
-Copy
-Edit
+Stages all changes in the working directory.
+
+7. How do you commit changes?
+
+git commit -m "your message"
+
+Creates a snapshot of staged changes.
+
+8. How do you check commit history?
+
+git log
+
+Displays a log of all previous commits.
+
+9. How to view commit history in short format?
+
 git log --oneline
-Shows a concise list of commits.
 
-9. Undo changes
-Unstage file:
+Shows condensed commit log.
 
-bash
-Copy
-Edit
+10. How do you see unstaged changes?
+
+git diff
+
+Shows the difference between working directory and staged changes.
+
+11. How do you remove a file from staging?
+
 git reset HEAD <file>
-Undo file change:
 
-bash
-Copy
-Edit
+Unstages the file but keeps the changes.
+
+12. How do you undo changes in a file?
+
 git checkout -- <file>
-10. Working with branches
-bash
-Copy
-Edit
-git branch           # List branches
-git checkout -b dev  # Create + switch to dev branch
-git switch main      # Switch to main
-11. Merging branches
-bash
-Copy
-Edit
+
+Reverts changes in the working directory.
+
+13. How do you check Git configuration?
+
+git config --list
+
+Shows user name, email, editor, etc.
+
+14. How to configure user details?
+
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+Sets global username and email.
+
+15. How to list all branches?
+
+git branch
+
+Shows current and other branches.
+
+16. How to create and switch to a new branch?
+
+git checkout -b new-branch
+
+Creates and switches to new-branch.
+
+17. How to switch to another branch?
+
+git checkout main
+
+Switches to main branch.
+
+18. How to merge branches?
+
 git checkout main
 git merge dev
-Merges changes from dev into main.
 
-12. Git stash
-bash
-Copy
-Edit
+Merges dev into main.
+
+19. What is Git stash?
+
 git stash
 git stash pop
-Temporarily saves uncommitted changes.
 
-13. Rebase vs Merge
-git merge: Creates a new commit combining changes.
+Temporarily saves and restores uncommitted changes.
 
-git rebase: Moves commits on top of another branch for a cleaner history.
+20. What is the difference between merge and rebase?
 
-14. Pull vs Fetch
-git fetch: Downloads changes without applying.
+Merge: Creates a new commit combining branches.
 
-git pull: Fetch + merge into current branch.
+Rebase: Rewrites commit history for a cleaner log.
 
-15. Resolve merge conflicts
-Edit the conflicting file manually, then:
+21. What is the difference between git pull and git fetch?
 
-bash
-Copy
-Edit
+git fetch: Downloads changes.
+
+git pull: Fetch + merges changes.
+
+22. How do you resolve merge conflicts?
+
+Edit conflicted files manually, then:
+
 git add .
 git commit
-16. Push code to GitHub
-bash
-Copy
-Edit
+
+23. How to push code to GitHub?
+
 git remote add origin <repo-url>
 git push -u origin main
-17. Fork vs Clone
-Fork: Copy of a repo under your GitHub account.
 
-Clone: Downloads a GitHub repo to your local system.
+Adds remote and pushes code.
 
-18. Create a Pull Request
+24. What is the difference between fork and clone?
+
+Fork: Copy repo to your GitHub.
+
+Clone: Copy repo to your local machine.
+
+25. How to create a Pull Request?
+
 Fork a repo
 
-Clone it, create a new branch
+Clone locally
 
-Push changes
+Create new branch
 
-Click New Pull Request on GitHub
+Push and go to GitHub > New PR
 
-19. Tags in Git
-bash
-Copy
-Edit
+26. How to add tags?
+
 git tag v1.0
 git push origin v1.0
-Marks a specific point in history (e.g., version release).
 
-20. Git Workflows
-Workflow	Description
-Git Flow	Feature/Develop/Release/Hotfix branches
-GitHub Flow	Short-lived branches, frequent merges into main
-Trunk-based	Developers commit to main frequently
+Marks a specific commit version.
+
+27. What are common Git workflows?
+
+Workflow
+
+Description
+
+Git Flow
+
+Uses develop, feature, release, etc.
+
+GitHub Flow
+
+Short branches, frequent merges
+
+Trunk-based
+
+Direct commits to main/trunk
+
+28. How do you delete a branch?
+
+git branch -d branch-name
+
+Deletes the specified local branch.
+
+29. How to remove remote branch?
+
+git push origin --delete branch-name
+
+Removes a branch from the remote repository.
+
+30. How to rename a branch?
+
+git branch -m old-name new-name
+
+Renames a local branch.
+
+31. How to see remote URLs?
+
+git remote -v
+
+Lists all remotes and their URLs.
+
+32. How to add a remote repository?
+
+git remote add origin <url>
+
+Adds a new remote.
+
+33. How to remove a remote repository?
+
+git remote remove origin
+
+Removes the specified remote.
+
+34. What does HEAD mean in Git?
+
+HEAD points to the latest commit in the current branch.
+
+35. What is the difference between HEAD and ORIG_HEAD?
+
+HEAD: Current branch position
+
+ORIG_HEAD: Last position before a destructive change
+
+36. How to revert a commit?
+
+git revert <commit-id>
+
+Creates a new commit that undoes the changes.
+
+37. How to hard reset to a previous commit?
+
+git reset --hard <commit-id>
+
+Completely removes history after the specified commit.
+
+38. How to soft reset?
+
+git reset --soft <commit-id>
+
+Moves HEAD but keeps changes staged.
+
+39. How to reset index and working directory?
+
+git reset --mixed <commit-id>
+
+Unstages and keeps changes in working directory.
+
+40. What is .gitignore?
+
+File that tells Git which files/folders to ignore.
+
